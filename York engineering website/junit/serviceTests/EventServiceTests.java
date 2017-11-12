@@ -26,39 +26,17 @@ public class EventServiceTests {
 		event1.setAddress("Spring Garden 312");
 		event1.setName("System Testing");
 		event1.setDescription("Get this sh*t working");
-		event1.setDay("7");
-		event1.setMonth("November");
-		event1.setYear("2017"); 
-		event1.setTime("11:00PM"); 
 	}
 	
-	public void TestSearchByDay() {
-		assertEquals("7", events.findEventByDay(event1.getDay()));
-	}
 	
-	public void TestSearchByMonth() {
-		assertEquals("November", events.findEventByMonth(event1.getMonth()));
-	}
 	
 	@Test
 	public void TestSearchByName() {
 		assertEquals("System Testing", events.findByName(event1.getName()));
 	}
 	
-	public void TestChangeEventDay() {
-		String newDay = "9";
-		events.changeEventDay(event1, newDay);
-		
-		assertEquals("9", event1.getDay()); 
-	}
 	
-	public void TestChangeEventMonth() {
-		String newMonth = "December";
-		events.changeEventMonth(event1, newMonth);
-		
-		assertEquals("December", event1.getMonth()); 
-	}
-	
+	@Test
 	public void TestChangeEventDate() {
 		int year = 2018; 
 		int month = 7; 
